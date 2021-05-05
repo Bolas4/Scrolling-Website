@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type='text/css'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <title>Scrolling Website</title>
+</head>
+<body>
+  <header>
+    <a href="#" class='logo'>Logo</a>
+    <ul>
+      <li><a href="#" class='active'>Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <section>
+    <img src="stars.png" id="stars" alt="">
+    <img src="moon.png" id="moon" alt="">
+    <img src="mountains_behind.png" id="mountains_behind" alt="">
+    <h2 id="text">Moon Light</h2>
+    <a href="" id="btn">Explore</a>
+    <img src="mountains_front.png" id="mountains_front" alt="">
+  </section>
+  <div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+
+    Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+    <br /> <br />
+    Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+    Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+    <br /> <br />
+    Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+    Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+    <br /> <br />
+    Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+    Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+    <br /> <br />
+    Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+    The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+  </div>
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('stars');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 +  'px';
+      moon.style.top = value * 1.05 +  'px';
+      mountains_behind.style.top = value * 0.5 +  'px';
+      mountains_front.style.top = value * 0 +  'px';
+      text.style.marginRight = value * 4 +  'px';
+      text.style.marginTop = value * 1.5 +  'px';
+      btn.style.marginTop = value * 1.5 +  'px';
+      header.style.top = value * 0.5 +  'px';
+    })
+  </script>
+</body>
+</html>
